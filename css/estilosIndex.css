@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-inline: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.nav-list{
+    display: flex;
+    align-items:center;
+    flex-wrap: wrap;
+    gap: .5rem
+}
+
+header{
+    background-color: rgb(53, 5, 99);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    padding-block: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bh{
+    background-color: var(--clr-gray);
+    padding: .5rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .25);
+    transition: 0.2s;
+}
+
+main{
+    padding: 2rem;
+    font-family: 'Comic Neue';
+    color: rgb(255, 196, 0);
+    min-height: 80vh;
+    background-color: black;
+    background-image: url(../image/gengar.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+a:link {
+    font-family: 'Comic Neue';
+    color: rgb(255, 255, 1); /* Cambia el color de los enlaces no visitados a azul */
+  }
+
+a:visited {
+    color: rgb(240, 240, 15); /* Cambia el color de los enlaces visitados a morado */
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+footer{
+    padding: 1rem;
+    background-color: rgb(37, 3, 68);
+    color: rgb(217, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.log img{
+    display: flexbox;
+    width: 47px;
+    height: auto;
+}
+
+.link-index{
+    background-color: rgb(8, 8, 8, 0.8);
+    font-family: 'Comic Neue';
+    padding: 2rem;
+    border: 5px solid yellow;
+    display: flexbox;
+    align-items: center;
+    text-align: center;
+    border-radius: 100vmax;
+}
+
+
+#carrusel-slider {
+    font-family: sans-serif;
+    margin: auto;
+    background-color: rgba(46, 2, 44, 0.8);
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#carrusel-slider>ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#carrusel-slider>ul.slider {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    height: 300px;
+}
+
+#carrusel-slider>ul.slider h1 {
+    position: absolute;
+    background-color: rgba(147, 3, 160, 0.6);
+    padding: 10px;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+}
+
+#carrusel-slider>ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background: rgb(36, 0, 31);
+}
+
+#carrusel-slider>ul.slider li img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#carrusel-slider>ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+#carrusel-slider>ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+#carrusel-slider>.menu {
+    text-align: center;
+    margin: 20px;
+}
+
+#carrusel-slider>.menu li {
+    display: inline-block;
+    text-align: center;
+}
+
+#carrusel-slider>.menu li a {
+    display: inline-block;
+    color: rgb(217, 255, 0);
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 35%;
+}
+
+#carrusel-slider > ul.slider li:first-child h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 80%;
+  }
+
+  #carrusel-slider > ul.slider li h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    width: 80%;
+  }
+

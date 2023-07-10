@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Poke100Mon</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Icono Logo-->
+    <link rel="shorcut icon" href="image/logo.png" type="image/gif" />
+
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="css/estilosProductos.css">
+</head>
+
+<body>
+    <header id="header">
+            <div class="botones">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <div class="log">
+                            <li><a href="index.html"><img src="image/logo.png" alt="#" /></a></li>
+                        </div>
+                        <li><a href="index.html"><h1 class="bh">Inicio</h1></a></li>
+                        <li><a href="pokedex.html"><h1 class="bh">Pokedex</h1></a></li>
+                        <li><a href="productos.html"><h1 class="bh">Shiny Intercambios</h1></a></li>
+                        <li><a href="#"><h1 class="bh">Contactanos</h1></a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <div id="app" class="container">
+            <div class="tit">
+                <h1>Listado de intercambios en Pokemon GO</h1>
+            </div>
+            <br>
+            <a  class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
+            <br><br>
+           <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Usuario</th>
+                                    <th scope="col">Mail</th>
+                                    <th scope="col">Pokemon</th>
+                                    <th scope="col">Nivel</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class=""  v-for="producto in productos">
+                                    <td scope="row">{{producto.id}}</td>
+                                    <td>{{producto.usuario}}</td>
+                                    <td>{{producto.mail}}</td>
+                                    <td>{{producto.pokemon}}</td>
+                                    <td>{{producto.nivel}}</td>
+                                    <td>{{producto.estado}}</td>
+                                    <td>
+                                        <img width="60"  :src="producto.imagen" :alt="producto.usuario">
+                                    </td>
+                                    <td>
+                    			    <a class="btn btn-primary" :href="'producto_update.html?id='+ producto.id" >Editar</a>
+                                      <button type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p><h4>Desarrollado por SerWer Lab</h4></p>
+    </footer>
+        <!--Link de Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+        <!--Link de VUE-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+    <script src="./js/productos.js"></script>
+</body>
+</html>

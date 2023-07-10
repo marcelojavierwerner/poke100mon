@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Producto Nuevo</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <!-- Icono Logo-->
+  <link rel="shorcut icon" href="image/logo.png" type="image/gif" />
+
+  <!-- Estilo CSS -->
+  <link rel="stylesheet" href="css/estilosProductos.css">
+</head>
+
+
+  <body>
+    <header id="header">
+        <div class="botones">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <div class="log">
+                        <li><a href="index.html"><img src="image/logo.png" alt="#" /></a></li>
+                    </div>
+                    <li><a href="index.html"><h1 class="bh">Inicio</h1></a></li>
+                    <li><a href="pokedex.html"><h1 class="bh">Pokedex</h1></a></li>
+                    <li><a href="productos.html"><h1 class="bh">Shiny Intercambios</h1></a></li>
+                    <li><a href="contact.html"><h1 class="bh">Contactanos</h1></a></li>
+                </ul>
+            </nav>
+        </div>
+  </header>
+
+  <main>
+    <div class="container" id="app">
+      <br><br>
+       <form  style="background-color: rgb(41, 2, 63);margin:10px auto ; width: 400px; padding: 20px;">
+        <h1>Alta de Solicitud</h1>
+        <br>
+        <div class="mb-3">
+          <label for="usuario">Usuario:   .</label>
+          <input type="text" name="usuario" id="usuario" v-model="usuario">
+        </div>
+        <div class="mb-3">
+            <label for="mail">Mail:   .</label>
+            <input type="text" name="mail" id="mail" v-model="mail">
+        </div>
+        <div class="mb-3">
+            <label for="pokemon">Pokemon:   .</label>
+            <input type="text" name="pokemon" id="pokemon" v-model="pokemon">
+        </div>
+        <div class="mb-3">
+          <label for="nivel">Nivel:   .</label>
+          <input type="number" name="nivel" id="nivel" v-model="nivel">
+        </div>
+        <div class="mb-3">
+          <label for="estado">Estado:   .</label>
+          <input type="text" name="estado" id="estado" v-model="estado">
+        </div>
+        <div class="mb-3">
+          <label for="imagen">Imagen:   .</label>
+          <input type="text" name="imagen" id="imagen" v-model="imagen">
+          <img width="100" :src="imagen" alt="">
+        </div>
+          <br>
+          <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p><h4>Desarrollado por SerWer Lab</h4></p>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/productos.js"></script>
+</body>
+</html>

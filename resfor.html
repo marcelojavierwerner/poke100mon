@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>Contactos</title>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Icono Logo-->
+    <link rel="shorcut icon" href="image/logo.png" type="image/gif" />
+
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="css/estilosProductos.css">
+</head>
+<body>
+
+    <header id="header">
+        <div class="botones">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <div class="log">
+                        <li><a href="index.html"><img src="image/logo.png" alt="#" /></a></li>
+                    </div>
+                    <li><a href="index.html"><h1 class="bh">Inicio</h1></a></li>
+                    <li><a href="pokedex.html"><h1 class="bh">Pokedex</h1></a></li>
+                    <li><a href="productos.html"><h1 class="bh">Shiny Intercambios</h1></a></li>
+                    <li><a href="contact.html"><h1 class="bh">Contactanos</h1></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<p align=center>&nbsp;</p>
+<h1 align=center><font size="+1">Gracias por consultarnos te responderemos al mail.</font></h1>
+
+<table border="1" align=center width="226" style="background-color: rgb(41, 2, 63);margin:10px auto ; width: 400px; padding: 20px;">
+  <tr>
+    <th align="center">Info:</th>
+    <th align="center">Datos:</th>
+  </tr>
+
+<script language="javascript">
+var args = location.search.substr(1).split('&');
+for (var i = 0; i < args.length; ++i) {
+  var parts = args[i].split('=');
+  if (parts != null) {
+    var field = parts[0];
+    var value = parts[1];
+    if (value == null) {
+      value = "null"
+    }
+    else {
+      value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+    }
+
+    document.writeln('<tr><td align="center">' + field + '</td>');
+    document.writeln('<td align="center">' + value + '</td></tr>');
+  }
+}
+</script>
+
+<noscript>
+<tr><td>
+<p>You need to turn on Javascript in your browser.</p>
+
+<p>In Microsoft Internet Explorer 4 or greater:</p>
+<ul>
+<li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+<li>Click on the "Security" tab.</li>
+<li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+and then click on "Settings...".)</li>
+<li>Under "Active scripting" make sure "Enable" is selected.</li>
+</ul>
+
+<p>In Netscape version 4 or greater:</p>
+<ul>
+<li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+<li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+<li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+<li>Click the <b>OK</b> button.</li>
+</ul>
+
+</td></tr>
+</noscript>
+
+</table>
+
+<br><br><br><br><br>
+<footer>
+    <p><h4>Desarrollado por SerWer Lab</h4></p>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
